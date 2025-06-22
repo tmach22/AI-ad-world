@@ -1,0 +1,37 @@
+.container {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #2a2a2e;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.summary {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background-color: #333;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+}
+
+.count {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1da1f2;
+}
+
+.label {
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: #ccc;
+} 

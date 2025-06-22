@@ -1,0 +1,5 @@
+letta-client
+fastapi
+uvicorn
+python-dotenv
+python-multipart
