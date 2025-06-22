@@ -19,7 +19,7 @@ CLIENT = Letta(token=api_key)
 
 PERSONALITIES_CSV = os.path.join(os.path.dirname(__file__), '..', 'data', 'agent_personalities.csv')
 AGENT_CONFIG = {
-    "model": "openai/gpt-4o",
+    "model": "meta/llama-3.1-70B",
     "embedding": "openai/text-embedding-3-small"
 }
 
