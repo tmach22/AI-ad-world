@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import SimulationController from './components/SimulationController';
+import HomePage from './components/HomePage';
 import ResultsDisplay from './components/ResultsDisplay';
 
 // Define the structure of a single persona result based on the backend
@@ -21,26 +21,16 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Persona Engagement Simulator</h1>
-      </header>
+      <HomePage 
+        setResults={setResults}
+        isLoading={isLoading}
+        setIsLoading={setIsLoading}
+      />
       <main>
-        <SimulationController 
-          setResults={setResults}
-          isLoading={isLoading}
-          setIsLoading={setIsLoading}
-        />
-        
         {isLoading && <div className="loader"></div>}
         
         {!isLoading && results.length > 0 && (
           <ResultsDisplay results={results} />
-        )}
-        
-        {!isLoading && results.length === 0 && (
-          <div style={{ textAlign: 'center', marginTop: '2rem', color: '#888' }}>
-            Upload a CSV and run a simulation to see results.
-          </div>
         )}
       </main>
     </div>

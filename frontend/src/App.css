@@ -5,24 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f8f9fa;
 }
 
 .App {
-  /* text-align: center; */ /* Removed to allow for more flexible layouts */
-}
-
-.App-header {
-  background-color: #282c34;
-  padding: 20px;
-  color: white;
-  margin-bottom: 2rem;
+  /* Global app container styles can go here if needed */
 }
 
 main {
-  padding: 0 2rem;
+  padding: 2rem;
   max-width: 1200px;
-  margin: 2rem auto;
+  margin: 0 auto;
 }
 
 .results-nav {
@@ -52,13 +44,15 @@ main {
 }
 
 .loader {
-  border: 5px solid #f3f3f3;
-  border-top: 5px solid #6f42c1; /* Matching new theme color */
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #4f46e5;
   border-radius: 50%;
   width: 50px;
   height: 50px;
   animation: spin 1s linear infinite;
   margin: 2rem auto;
+  position: relative;
+  z-index: 10;
 }
 
 @keyframes spin {

@@ -1,64 +1,52 @@
 .container {
-    background: #f8f9fa;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    background-color: #f7faff;
+    background-image: 
+        radial-gradient(at 80% 20%, hsla(320, 100%, 90%, 0.4) 0px, transparent 50%),
+        radial-gradient(at 20% 80%, hsla(200, 100%, 85%, 0.4) 0px, transparent 50%);
+    position: relative;
+    overflow: hidden;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 .header {
     text-align: center;
     margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 .title {
-    font-size: 3rem;
-    color: #343a40;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+    font-size: 3.5rem;
+    color: #192A6B;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 4px solid #192A6B;
+    display: inline-block;
 }
 
 .subtitle {
     font-size: 1.25rem;
-    color: #6c757d;
-    max-width: 500px;
+    color: #5a7d9a;
+    max-width: 550px;
+    margin-top: 1rem;
 }
 
 .card {
-    background: white;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     padding: 2rem 2.5rem;
-    border-radius: 16px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 650px;
-    position: relative;
-    overflow: hidden;
-}
-
-.card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at center, rgba(0, 123, 255, 0.1), transparent 40%),
-                radial-gradient(circle at 80% 20%, rgba(255, 0, 150, 0.15), transparent 50%),
-                radial-gradient(circle at 20% 80%, rgba(0, 255, 150, 0.15), transparent 50%);
-    z-index: 0;
-    animation: gradient-animation 15s ease infinite;
-}
-
-@keyframes gradient-animation {
-    0% { transform: rotate(0deg); }
-    50% { transform: rotate(180deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Ensure content is above the background */
-.card > * {
     position: relative;
     z-index: 1;
 }
@@ -92,12 +80,14 @@
     font-size: 1rem;
     resize: vertical;
     box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .textarea:focus {
     outline: none;
     border-color: #80bdff;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.25);
+    background-color: white;
 }
 
 .fileInput {
@@ -106,6 +96,8 @@
     border: 1px solid #ced4da;
     border-radius: 8px;
     box-sizing: border-box;
+    background: white;
+    cursor: pointer;
 }
 
 .buttonGroup {
@@ -126,30 +118,26 @@
 }
 
 .analyzeButton {
-    background-color: #6f42c1;
+    background-color: #4f46e5;
     color: white;
 }
 
 .analyzeButton:hover {
-    background-color: #5a32a3;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(111, 66, 193, 0.2);
+    background-color: #4338ca;
 }
 
 .resetButton {
-    background-color: #20c997;
+    background-color: #10b981;
     color: white;
 }
 
 .resetButton:hover {
-    background-color: #1baa80;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(32, 201, 151, 0.2);
+    background-color: #059669;
 }
 
 .divider {
     border: none;
-    border-top: 1px solid #e9ecef;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     margin: 2.5rem 0;
 }
 
